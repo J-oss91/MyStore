@@ -1,11 +1,21 @@
+import { Route, Router } from 'react-router-dom';
+import Home from './pages/home';
 import Store from './components/store';
 import './App.css';
+import React from 'react';
 
-function App() {
+
+const App = () => {
+
+
   return (
-    <div className="App">
-    <Store />
-    </div>
+    <Router>
+      <Route path='/' Component={Home}/>
+      < Route path='/store' element = {<Store/>} />
+    </Router>
+    // <div className="App">
+    // <Store />
+    // </div>
   );
 }
 
